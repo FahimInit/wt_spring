@@ -33,65 +33,68 @@ if (isset($_GET['delete'])) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Student Management</title>
     <style>
+    body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f4f7f6;
+    }
 
-        body { 
-            font-family: Arial; 
-            padding: 20px; 
-            background: #f4f7f6; 
-        }
-        
-        form, table { 
-            background: white; 
-            padding: 20px; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-            margin-bottom: 20px; 
-        }
-        
-        table { 
-            width: 100%; 
-            border-collapse: collapse; 
-        }
-        
-        th, td { 
-            border: 1px solid #ddd; 
-            padding: 12px; text-align: left; 
-        }
-        
-        th { 
-            background-color: #28a745; 
-            color: white; 
-        }
+    form,
+    table {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
 
-        .btn-edit { 
-            color: blue; 
-            text-decoration: none; 
-            margin-right: 10px; 
-        }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-        .btn-delete { 
-            color: red; 
-            text-decoration: none; 
-        }
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
 
+    th {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .btn-edit {
+        color: blue;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .btn-delete {
+        color: red;
+        text-decoration: none;
+    }
     </style>
 </head>
+
 <body>
 
     <h2>Add New Student</h2>
     <form method="post">
         <label>Full Name:</label><br>
         <input type="text" name="name" required><br><br>
-        
+
         <label>Email Address:</label><br>
         <input type="email" name="email" required><br><br>
-        
+
         <label>Registration Number:</label><br>
         <input type="text" name="regNumber" required><br><br>
-        
+
         <label>Department:</label><br>
         <select name="department" required>
             <option value="">Select</option>
@@ -100,7 +103,7 @@ if (isset($_GET['delete'])) {
             <option value="EEE">EEE</option>
             <option value="LLB">LLB</option>
         </select><br><br>
-        
+
         <input type="submit" name="register" value="Add Student">
     </form>
 
@@ -130,4 +133,5 @@ if (isset($_GET['delete'])) {
         ?>
     </table>
 </body>
+
 </html>
